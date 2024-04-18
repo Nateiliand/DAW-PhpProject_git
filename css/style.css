@@ -1,0 +1,109 @@
+* {
+  box-sizing: border-box;
+  font-family: Cambria;
+}
+body{
+  margin: 0 auto;
+  max-width: 1500px;
+  font-size: 16px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+  h1{
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  th {
+    height: 60px;
+    padding: 0 20px;
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+  td {
+    height: 30px;
+    padding: 1%;
+    font-size: 16px;
+    text-align: center;
+  }
+  hr{
+      border: 0;
+      height: 1px;
+      background-color: #b8b8b8;
+      margin: 20px 0;
+  }
+
+  /*Botons*/
+button, input[type=submit]{
+  font-size: 18px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 0;
+  cursor: pointer;
+  }
+  button a{
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    text-align: center;
+  }
+  .afegir{
+    background-color: rgb(0, 140, 255);
+    margin: 15px 30px;
+  }
+  .afegir:hover{
+    background-color: rgb(0, 57, 163);
+  }
+  .elimina{
+    background-color: rgb(255, 54, 54);
+  }
+  .elimina:hover{
+    background-color: rgb(194, 33, 33);
+  }
+
+footer{
+  height: 100px;
+}
+
+/*Taula productes*/
+.productes tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/*Formulari*/
+fieldset{
+  border: 0;
+  padding: 0 400px;
+}
+input[type=text],input[type=number], select{
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+}
+/*Amaga les fletxes del camp 'Preu'*/
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+/*Botó*/
+input[type=submit]{
+  width: 100%;
+  border: 2px solid #000000;
+  background-color: #ffffff;
+  color: black;
+}
+input[type=submit]:hover{
+  background-color:  #000000;
+  color: white;
+}
+
