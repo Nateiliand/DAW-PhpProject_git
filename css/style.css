@@ -5,7 +5,7 @@
 body{
   margin: 0 auto;
   max-width: 1500px;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 table {
@@ -21,13 +21,13 @@ table {
   th {
     height: 60px;
     padding: 0 20px;
-    font-size: 18px;
+    font-size: 20px;
     text-transform: uppercase;
   }
   td {
     height: 30px;
     padding: 1%;
-    font-size: 16px;
+    font-size: 18px;
     text-align: center;
   }
   hr{
@@ -47,7 +47,7 @@ button, input[type=submit]{
   }
   button a{
     color: white;
-    font-size: 18px;
+    font-size: 20px;
     text-decoration: none;
     text-align: center;
   }
@@ -81,7 +81,7 @@ fieldset{
 }
 input[type=text],input[type=number], select{
   width: 100%;
-  font-size: 16px;
+  font-size: 18px;
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
