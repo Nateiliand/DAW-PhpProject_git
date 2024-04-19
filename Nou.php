@@ -47,11 +47,12 @@
 <?php
 
     /**
-     * Script per afegir un producte a la base de dades.
+     * Script per recollir les dades enviades per el formulari.
      *
-     * Aquest script recull les dades enviades per un formulari (nom, descripció, preu i categoria del producte)
-     * i les insereix a la base de dades de productes.
-     * Si hi ha cap error, mostrarà un missatge i retornarà a la pàgina principal.
+     * Aquest script recull les dades enviades per un formulari
+     * (nom, descripció, preu i categoria del producte).
+     * 
+     * @package Connexio.php
      * 
      * @param string $nom El nom del producte.
      * @param string $descripció La descripció del producte.
@@ -69,11 +70,31 @@
     // Inclou l'arxiu de connexio
     include ("Connexio.php");
         
+    /**
+     * Script per afegir un producte a la base de dades.
+     *
+     * Aquest insereix les dades a la base de dades de productes.
+     * Si hi ha cap error, mostrarà un missatge i retornarà a la pàgina principal.
+     * 
+     * @param string $inserta Consulta SQL que inserta el nou element a la base de dades.
+     * @param mysqli $resultat Execcució de la consulta SQL connectant-se a la base de dades.
+     * 
+     */
+    
     //consulta sql
-    $consulta= "INSERT INTO productes (nom, descripció, preu, categoria_id) VALUES ('$nom', '$descripció', $preu, '$categoria_id')";
+    $inserta= "INSERT INTO productes (nom, descripció, preu, categoria_id) VALUES ('$nom', '$descripció', $preu, '$categoria_id')";
     // Executa la consulta
-    $resultat= mysqli_query($connexio,$consulta);
+    $resultat= mysqli_query($connexio,$inserta);
 
+    /**
+     * 
+     * @throws Exception Si es realitza correctament, torna a la pàgina principal, i si no, 
+     * es mostrarà un missatge i es retornarà a la pàgina principal.
+     * 
+     * Per finalitzar es tancarà la connexió.
+     * 
+     */
+    
     // Comprova si la consulta s'ha executat correctament
     if($resultat){
         // Redirecció l'index
